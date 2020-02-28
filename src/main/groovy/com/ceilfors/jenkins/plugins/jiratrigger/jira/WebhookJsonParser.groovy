@@ -14,7 +14,7 @@ class WebhookJsonParser implements JsonObjectParser<Webhook> {
     Webhook parse(JSONObject json) throws JSONException {
         new Webhook(
                 selfUri: JsonParseUtil.getSelfUri(json),
-                name: json.getString('displayName'),
+                name: json.getString('name'),
                 url: json.getString('url'),
         )
     }
